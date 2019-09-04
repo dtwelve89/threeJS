@@ -16,7 +16,7 @@ const init = () => {
 
   document.body.appendChild(renderer.domElement);
 
-  const geometry = new THREE.BoxGeometry(1, 1, 1);
+  const geometry = new THREE.SphereGeometry(2, 200, 200);
   // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 
   const texture = new THREE.TextureLoader().load('textures/MoonText.jpg');
@@ -31,8 +31,8 @@ const init = () => {
 const animate = () => {
   requestAnimationFrame(animate);
 
-  cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;
+  cube.rotation.x += 0.003;
+  cube.rotation.y += 0.003;
 
   renderer.render(scene, camera);
 };
